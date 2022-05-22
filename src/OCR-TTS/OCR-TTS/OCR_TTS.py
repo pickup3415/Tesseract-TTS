@@ -1,6 +1,7 @@
 from PIL import Image
 import pytesseract
 from gtts import gTTS
+import cv2
 
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 ocr_text = pytesseract.image_to_string(Image.open("n1.PNG"), lang="kor")
