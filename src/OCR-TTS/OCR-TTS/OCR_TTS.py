@@ -8,6 +8,11 @@ import sys
 a = int(input("English = 1, Korean = 2 : ")
 
 image = cv2.imread('n1.PNG')
+
+if image is None:
+    print("Image file Error")
+    sys.exit()
+
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 gray = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
 
@@ -18,7 +23,7 @@ elif a==2:
     lan="kor"
     lan2="ko"
 else:
-    print("Error")
+    print("Language Error")
     sys.exit()
 
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
