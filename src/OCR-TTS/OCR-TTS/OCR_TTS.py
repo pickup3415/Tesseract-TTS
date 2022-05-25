@@ -5,7 +5,7 @@ import cv2
 from typing import Text
 import sys
 
-a = int(input("English = 1, Korean = 2 : ")
+a = int(input("English = 1, Korean = 2 : "))
 
 image = cv2.imread('n1.PNG')
 
